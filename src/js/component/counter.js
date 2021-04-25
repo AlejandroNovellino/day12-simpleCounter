@@ -1,6 +1,7 @@
-import { timers } from "jquery";
 import React from "react";
+
 import { Alert } from "./Alert";
+
 export class Counter extends React.Component {
 	constructor() {
 		super();
@@ -34,7 +35,7 @@ export class Counter extends React.Component {
 		});
 	};
 
-	updateOnCountdow = _ => {
+	updateOnCountdown = _ => {
 		if (this.state.seconds) {
 			this.setState({
 				seconds: this.state.seconds - 1
@@ -61,7 +62,7 @@ export class Counter extends React.Component {
 		this.handleClickStop();
 		this.setState({
 			seconds: this.state.countDownSeconds,
-			intervalCountDown: setInterval(this.updateOnCountdow, 1000),
+			intervalCountDown: setInterval(this.updateOnCountdown, 1000),
 			onCountDown: true
 		});
 	};
